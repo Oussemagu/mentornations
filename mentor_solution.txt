@@ -1,0 +1,78 @@
+algorithm prblem_two
+procedure quadric_equation:(a:float;b:float;c:float)
+variable sqrt_delta:float
+variables equation,sol1,sol2:float
+
+begin procedure 
+ equation<-- a*x*x + b*x +c 
+ write ("your equation is",equation,"=0")
+sqrt_delta<-- sqrt(b*b-4*a*c)
+ if sqrt_delta<0 then
+  write("there is no solution in R")
+ elif sqrt_delta=0 then
+  write("x=",b/2a)
+ else
+  sol1<-- (-b+sqrt_delta)/2a)
+  sol2<-- (-b-sqrt_delta)/2a)
+  write ("x=",sol1,"or x=",sol2)
+ end if 
+begin
+write ("enter number a")
+read(a)
+write ("enter number b")
+read(b)
+write ("enter number c")
+read(c)
+quadric_equation(a;b;c)
+end
+-------------------
+ 
+algorithm problem_1
+procedure procedure_ahmed:(name:string,birth_day:string)
+variables name,birth_date:string
+begin
+write("enter your name")
+read(name) 
+write("Welcome ",name)
+write("enter your birth date as the format dd/mm")
+read(birth_date)
+if birth_date="25/10" then
+  write("happy birthday!")
+else:
+  write("person error!")
+end if
+end
+begin
+read(name)
+read(birth_day)
+procedure_ahmed(name,birth_day)
+end 
+----------------
+ALGORITHM problem_3{calculates the SUM of common elements in set 1 and set 2}
+array tab(n):integer 
+array list(p):integer
+variables n,p :integer 
+variables l,i,k:integer
+begin 
+SUM<---0
+write("enter the length of your first set")
+read(n)
+write("enter the length of your second set")
+read(p)
+for i=0 to n-1
+    write("enter set ",i,"for your first set")
+    read(tab[i])
+end for
+for k=0 to l-1
+    write("enter set ",k,"for your second set")
+    read(tab[k])
+end for
+for i=0 to n 
+  for l=0 to p
+    if tab[i]= list[p] then
+     SUM<-- SUM+ tab[i] *2
+    end if
+  end for
+end for 
+end
+    
